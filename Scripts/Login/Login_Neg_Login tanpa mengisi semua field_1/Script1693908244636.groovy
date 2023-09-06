@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 
 //initialization expected text
 String ExpectedText = "Tidak boleh kosong"
-
+String JudulTestCase = "Login_Neg_Login tanpa mengisi semua field_1.png"
 
 
 //calling testcase from login_pos_masuk kehalaman login kumparan
@@ -37,3 +37,5 @@ if(WebUI.verifyTextPresent(ExpectedText, false) == true) {
 else {
 	WebUI.comment("inline tidak sesuai")
 }
+
+WebUI.takeScreenshot("C:/Users/user/Documents/Latihan Testing/Report katalon/Kumparan Evidance/"+ JudulTestCase)

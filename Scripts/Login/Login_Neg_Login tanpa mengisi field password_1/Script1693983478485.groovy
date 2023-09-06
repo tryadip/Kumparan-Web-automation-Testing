@@ -21,6 +21,7 @@ import org.openqa.selenium.Keys as Keys
 String txtEmail = "tryadi@gmail.com"
 //Initialization expected text present
 String expectedText = "Tidak boleh kosong"
+String JudulTestCase = "Login_Neg_Login tanpa mengisi field password.png"
 
 
 //calling test form test case login_Pos_masuk kehalaman login kumparan
@@ -31,3 +32,5 @@ WebUI.setText(findTestObject("Login/TxtField/Field_email"), txtEmail)
 WebUI.click(findTestObject("Login/Button/Btn_Masuk_Dashboard"))
 //set for expected result text present
 WebUI.verifyTextPresent(expectedText, false)
+
+WebUI.takeScreenshot("C:/Users/user/Documents/Latihan Testing/Report katalon/Kumparan Evidance/"+ JudulTestCase)

@@ -22,6 +22,7 @@ import org.openqa.selenium.Alert
 
 //user directed to kumparan page
 WebUI.openBrowser("https://kumparan.com/")
+String JudulTestCase = "Login_Neg_Masuk kehalaman Login kumparan_1.png"
 
 try {
 	//initialization alert = button tidak
@@ -40,3 +41,4 @@ try {
 }
 //user click button login
 WebUI.click(findTestObject("Login/Button/btn_Login"))
+WebUI.takeScreenshot("C:/Users/user/Documents/Latihan Testing/Report katalon/Kumparan Evidance/"+ JudulTestCase)
