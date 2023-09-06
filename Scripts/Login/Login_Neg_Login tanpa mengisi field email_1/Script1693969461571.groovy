@@ -20,3 +20,4 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase("Login/Login_Pos_Masuk kehalaman Login Kumparan"), [:], FailureHandling.STOP_ON_FAILURE)
 WebUI.setText(findTestObject("Login/TxtField/Field_pass"), "zGP9pA3+geTo8aT3ZWm9og==")
 WebUI.click(findTestObject("Login/Button/btn_Masuk_Dashboard"))
+WebUI.verifyTextPresent("Tidak boleh kosong", false)
