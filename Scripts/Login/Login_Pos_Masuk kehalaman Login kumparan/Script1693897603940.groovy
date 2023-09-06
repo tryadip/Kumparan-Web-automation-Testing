@@ -20,12 +20,13 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.driver.DriverFactory
 import org.openqa.selenium.Alert
 
+//user directed to kumparan page
 WebUI.openBrowser("https://kumparan.com/")
 
 try {
-	
+	//initialization alert = button tidak
 	def alert = findTestObject("Login/Alert/btn_tdk")
-	// If the alert is present, dismiss it
+	// If the alert is present, click button tidak
 	if (alert != null) {
 		WebUI.click(alert)
 	} else {
@@ -37,5 +38,5 @@ try {
 	// Handle any exceptions that may occur during alert dismissal
 	println("An error occurred while dismissing the alert: " + e.getMessage())
 }
-
+//user click button login
 WebUI.click(findTestObject("Login/Button/btn_Login"))

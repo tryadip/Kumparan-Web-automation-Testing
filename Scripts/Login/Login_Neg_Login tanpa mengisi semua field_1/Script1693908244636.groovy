@@ -17,14 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+//initialization expected text
 String ExpectedText = "Tidak boleh kosong"
+
+
+
+//calling testcase from login_pos_masuk kehalaman login kumparan
 WebUI.callTestCase(findTestCase("Login/Login_Pos_Masuk kehalaman Login Kumparan"), [:], FailureHandling.STOP_ON_FAILURE)
+//user click button login at login page
 WebUI.click(findTestObject("Login/Button/Btn_Masuk_Dashboard"))
 
+//if expected result is true the comment will appear "text sudah sesuai"
 if(WebUI.verifyTextPresent(ExpectedText, false) == true) {
 	WebUI.comment("Text sudah sesuai =" +ExpectedText)
 }
 
+//if result is not as expected the comment will appear "text tidak sesuai"
 else {
 	WebUI.comment("inline tidak sesuai")
 }

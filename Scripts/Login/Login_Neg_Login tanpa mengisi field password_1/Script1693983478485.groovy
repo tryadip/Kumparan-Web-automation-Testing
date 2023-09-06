@@ -17,9 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String JudulTestCase = "Login_Neg_Login tanpa mengisi field email_1.png"
-WebUI.callTestCase(findTestCase("Login/Login_Pos_Masuk kehalaman Login Kumparan"), [:], FailureHandling.STOP_ON_FAILURE)
-WebUI.setText(findTestObject("Login/TxtField/Field_pass"), "zGP9pA3+geTo8aT3ZWm9og==")
-WebUI.click(findTestObject("Login/Button/btn_Masuk_Dashboard"))
-WebUI.verifyTextPresent("Tidak boleh kosong", false)
-WebUI.takeScreenshot("C:/Users/user/Documents/Latihan Testing/Report katalon/Kumparan Evidance/"+ JudulTestCase)
+//Initialization input email textfield
+String txtEmail = "tryadi@gmail.com"
+//Initialization expected text present
+String expectedText = "Tidak boleh kosong"
+
+
+//calling test form test case login_Pos_masuk kehalaman login kumparan
+WebUI.callTestCase(findTestCase("Login/Login_Pos_masuk kehalaman Login kumparan"), [:], FailureHandling.CONTINUE_ON_FAILURE)
+//set input text field email
+WebUI.setText(findTestObject("Login/TxtField/Field_email"), txtEmail)
+//click button login
+WebUI.click(findTestObject("Login/Button/Btn_Masuk_Dashboard"))
+//set for expected result text present
+WebUI.verifyTextPresent(expectedText, false)
