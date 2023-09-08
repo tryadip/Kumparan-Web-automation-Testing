@@ -17,9 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String JudulTestCase = "Login_Neg_Login tanpa mengisi field email_1.png"
-WebUI.callTestCase(findTestCase("Login/Login_Pos_Masuk kehalaman Login Kumparan"), [:], FailureHandling.STOP_ON_FAILURE)
-WebUI.setText(findTestObject("Login/TxtField/Field_pass"), "dadadawaaw")
-WebUI.click(findTestObject("Login/Button/btn_Masuk_Dashboard"))
-WebUI.verifyTextPresent("Tidak boleh kosong", false)
-WebUI.takeScreenshot("C:/Users/user/Documents/Latihan Testing/Report katalon/Kumparan Evidance/"+ JudulTestCase)
+String JudulTaseCase = "Login_Pos_Klik Button Login via facebook_1.png"
+WebUI.callTestCase(findTestCase("Login/Login_Pos_Masuk kehalaman Login kumparan"),[:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject("Login/Button/btn_Login_Facebook"))
+WebUI.takeScreenshot("C:/Users/user/Documents/Latihan Testing/Report katalon/Kumparan Evidance/"+JudulTaseCase)
